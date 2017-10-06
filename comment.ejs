@@ -1,0 +1,65 @@
+
+<% post.comments.forEach(function (comment, index) { %>
+username: <p><%- comment.name %></p> 
+comment: <p><%- comment.content %></p>
+<% }) %>
+<form method="post">
+<div class = "check">
+  <script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+
+
+
+<button onclick="myFunction()">Click me</button>
+ <script>
+  function myFunction() {
+  var number = prompt("Which one?");
+  if(number ==  "Item1"){
+    document.getElementById("demo1").innerHTML = "<img src='http://us.i1.yimg.com/us.yimg.com/i/mesg/emoticons7/71.gif'/>";  
+}
+if(number == "Item2"){
+document.getElementById("demo1").innerHTML = "<img src='http://us.i1.yimg.com/us.yimg.com/i/mesg/emoticons7/71.gif'/>";  
+}
+if(number =="Item3" ){
+document.getElementById("demo1").innerHTML = "<img src='http://us.i1.yimg.com/us.yimg.com/i/mesg/emoticons7/5.gif'/>";
+}
+if(number == "Item4"){
+document.getElementById("demo1").innerHTML = "<img src='http://us.i1.yimg.com/us.yimg.com/i/mesg/emoticons7/4.gif'/>";
+}
+if(number == "Item5"){
+document.getElementById("demo1").innerHTML = "<img src='http://us.i1.yimg.com/us.yimg.com/i/mesg/emoticons7/3.gif'/>";
+}
+if(number == "Item6"){
+document.getElementById("demo1").innerHTML = "<img src='http://us.i1.yimg.com/us.yimg.com/i/mesg/emoticons7/10.gif'/>";
+}
+
+}
+</script>
+<center>
+  <textarea name="content" id = "demo1" rows="5" cols="80"></textarea><br />
+
+<div>  
+<li class = "ui">
+Item1: <img src='http://us.i1.yimg.com/us.yimg.com/i/mesg/emoticons7/71.gif'/>
+Item2: <img src='http://us.i1.yimg.com/us.yimg.com/i/mesg/emoticons7/71.gif'/>
+Item3: <img src='http://us.i1.yimg.com/us.yimg.com/i/mesg/emoticons7/5.gif'/>
+Item4: <img src='http://us.i1.yimg.com/us.yimg.com/i/mesg/emoticons7/4.gif'/>
+Item5: <img src='http://us.i1.yimg.com/us.yimg.com/i/mesg/emoticons7/3.gif'/></br>
+Item6: <img src='http://us.i1.yimg.com/us.yimg.com/i/mesg/emoticons7/10.gif'/></br>
+</li>
+</div>
+<% if (user) { %>
+  username: <input type="text" name="name"  value="<%= user.name %>"/>
+  <input type="submit" value="Send" /></center>
+<% } else { %>
+    <div class = "login">
+  <input type = "button" onclick ="location.href='/login';" value = "Login"/>
+  </div>
+    console.log("Please login first");
+  <% } %>
+  
+  </div>
+  
+</form>

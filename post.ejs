@@ -1,0 +1,8 @@
+<%- include index1 %>
+<center><p class="info">
+  Author：<a href="/name/<%= post.name%>"><%= post.name %></a> | 
+  Date：<%= post.time.minute %>
+</p>
+<p><%- post.post %></p></center>
+<%- include comment %>
+<%- include footer %>

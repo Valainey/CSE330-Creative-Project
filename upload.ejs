@@ -1,0 +1,17 @@
+<%- include index1 %>
+
+<form method= "post">
+<div class = "check">
+<center>
+Title: <input type="text" name="title"/><br/>
+Content:<textarea name= "post" rows= "20" cols="100"/></textarea><br/>
+<% if (user) { %>  
+<input type= "submit" value= "send"/></center>
+<% }
+else { %>
+    console.log("Please login first");
+  <% } %>
+</div>
+</form>
+
+<%-include footer%>
